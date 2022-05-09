@@ -21,7 +21,6 @@ pipeline {
       
       steps {
         echo 'gradle cant be executed, maybe beacuse the app is javascript and doesnt have gradle inside?...'
-        sh './gradlew -v'
       }
     }
   }
