@@ -8,6 +8,9 @@ pipeline {
       
       steps {
         echo 'executing yarn...'
+        nodejs('Node-10.17') {
+          batch 'yarn install'
+        }
       }
     }
     
@@ -15,6 +18,9 @@ pipeline {
       
       steps {
         echo 'executing gradle...'
+        withGradle(){
+          batch './gradlew -v'
+        }
       }
     }
   }
