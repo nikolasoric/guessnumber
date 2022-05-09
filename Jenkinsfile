@@ -14,12 +14,10 @@ pipeline {
       }
     }
     
-    stage("run backend") {
+    stage("no backend") {
       
       steps {
-        echo 'executing gradle...'
-        withGradle(){
-          sh './gradlew -v'
+        echo 'gradle cant be executed, maybe beacuse the app is javascript and doesnt have gradle inside?...'
         }
       }
     }
