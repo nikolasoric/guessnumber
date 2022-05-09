@@ -2,6 +2,9 @@ pipeline {
   
   agent any
   
+  tools {
+    gradle 'Gradle-7.4'
+  }
   stages {
   
     stage("run frontend") {
@@ -18,6 +21,7 @@ pipeline {
       
       steps {
         echo 'gradle cant be executed, maybe beacuse the app is javascript and doesnt have gradle inside?...'
+        sh './gradlew -v'
       }
     }
   }
