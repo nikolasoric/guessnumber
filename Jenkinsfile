@@ -4,24 +4,17 @@ pipeline {
   
   stages {
   
-    stage("build") {
+    stage("run frontend") {
       
       steps {
-        echo 'building the application...'
+        echo 'executing yarn...'
       }
     }
     
-    stage("test") {
+    stage("run backend") {
       
       steps {
-        echo 'testing the application...'
-      }
-    }
-    
-    stage("deploy") {
-      
-      steps {
-        echo 'deploying the application...'
+        echo 'executing gradle...'
       }
     }
   }
